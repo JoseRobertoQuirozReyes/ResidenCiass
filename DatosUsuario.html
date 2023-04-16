@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/DatosUsuarios.css">
+    <title>Dstos del Usuario</title>
+</head>
+<style>
+    body{
+  background-image: url(img/escuela.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+</style>
+<body>
+    <form>
+        <label for="foto">Foto de perfil:</label>
+            <div class="upload-btn-wrapper">
+        <button class="btn">Seleccionar archivo</button>
+        <input type="file" name="foto" id="foto" accept="image/*">
+            </div><br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre actual del usuario"><br><br>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido actual del usuario"><br><br>
+        
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Correo electrónico actual del usuario"><br><br>
+        
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña actual del usuario"><br><br>
+
+        <label for="direccion">Direccion:</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Direccion Actual"><br><br>
+        
+        <button type="submit">Actualizar datos</button>
+      </form>
+      
+</body>
+</html>

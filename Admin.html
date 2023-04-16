@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/Admin.css">
+    <script src="Scrips/Admin.js"></script>
+    <title>Administrador</title>
+</head>
+<style>
+  body {
+    background-image: url("img/escuela.jpg");
+    background-size: cover;
+  }
+</style>
+<body>
+    <nav>
+        <ul>
+          <li><a href="#inicio">Registro Usuarios</a></li>
+          <li><a href="#acerca-de">Periodos</a></li>
+          <li><a href="#servicios">Usuarios</a></li>
+          <li><a href="#contacto">Documentos</a></li>
+        </ul>
+      </nav>
+      
+      <main>
+        <section id="inicio">
+            <h1>Registro de Usuario</h1><br>
+
+            <form action="procesar_registro.php" method="post" enctype="multipart/form-data"><br>
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre"><br>
+        
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email"><br>
+        
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password"><br>
+              <input type="submit" value="Registrar"><br>
+        
+              <label for="archivo_excel">Archivo de Excel:</label>
+              <input type="file" id="archivo_excel" name="archivo_excel" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><br>
+        
+              <input type="submit" value="Registrarse">
+            </form>
+        </section>
+        
+        <section id="acerca-de">
+            <div class="tabs">
+                <button class="tablink" onclick="openTab(event, 'tab1')">Periodos</button>
+                <button class="tablink" onclick="openTab(event, 'tab2')">Sub Periodos</button>
+                
+              </div>
+              
+              <div id="tab1" class="tabcontent">
+                <h1>Registro de Periodos Escolares</h1>
+              <form action="procesar_registro.php" method="post">
+                <label for="nombre">Nombre del periodo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="fecha_inicio">Fecha de inicio:</label>
+                <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+                
+                <label for="fecha_fin">Fecha de fin:</label>
+                <input type="date" id="fecha_fin" name="fecha_fin" required><br>
+                
+                <input type="submit" value="Registrar periodo">
+              </form>
+              </div>
+              
+              <div id="tab2" class="tabcontent">
+                <h1>Registro de Sub-Periodos</h1>
+                <form action="procesar_registro.php" method="post">
+                  <label for="nombre">Nombre del periodo:</label>
+                  <input type="text" id="nombre" name="nombre" required>
+                  
+                  <label for="fecha_inicio">Fecha de inicio:</label>
+                  <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+                  
+                  <label for="fecha_fin">Fecha de fin:</label>
+                  <input type="date" id="fecha_fin" name="fecha_fin" required><br>
+                  
+                  <input type="submit" value="Registrar periodo">
+                </form>
+              </div>
+        </section>
+        
+        <section id="servicios">
+          <h2>Usuarios Registrados</h2>
+          <p>Aqui se mostraran los usuarios registrados de la base de datos</p>
+        </section>
+        
+        <section id="contacto">
+            <h2>Documentos</h2>
+            <p>Se descargaran todos los archivos enviados a la base de datos</p>
+            <a href="pago.zip" download><button class="btn-download"><i class="fas fa-download"></i> Descargar archivo</button></a>            
+        </section>
+      </main>
+      
+</body>
+</html>
